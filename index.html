@@ -71,30 +71,26 @@
   </section>
 <section id="projects" class="py-20 px-6 md:px-10 lg:px-16 max-w-6xl mx-auto">
   <h2 class="text-3xl md:text-4xl font-bold text-white/90 mb-10">Projects</h2>
-  
-  <div class="grid md:grid-cols-2 gap-6">
 
+  <div class="grid md:grid-cols-1 gap-6">
+
+    <!-- Penguin Project Card -->
     <div onclick="document.getElementById('penguinModal').classList.remove('hidden')" class="rounded-2xl border border-white/10 bg-white/5 p-6 cursor-pointer hover:bg-white/10 transition">
       <h3 class="text-xl font-semibold text-white/90">Penguin Weight Monitoring (IoT + ML)</h3>
       <ul class="mt-3 space-y-2 text-white/70 list-disc list-inside">
-        <li>ESP32-CAM + RFID + load cells for real-time health tracking</li>
-        <li>Dashboard with Flask backend hosted on AWS</li>
-        <li>ML model for anomaly detection and alerts</li>
+        <li>ESP32-CAM + RFID + load cells for real-time health tracking.</li>
+        <li>Dashboard with Flask backend hosted on AWS.</li>
+        <li>ML model for anomaly detection and alerts.</li>
       </ul>
+      <p class="mt-2 text-white/70">Click to see images and system diagram.</p>
     </div>
 
-    <div id="penguinModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-      <div class="relative">
-        <img src="Weighingplatform.jpeg" alt="Penguin Project" class="rounded-2xl max-h-[80vh]">
-        <button onclick="document.getElementById('penguinModal').classList.add('hidden')" class="absolute top-2 right-2 bg-white/20 hover:bg-white/40 text-white px-3 py-1 rounded-xl">✕</button>
-      </div>
-    </div>
-
+    <!-- FPGA Project -->
     <div class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
       <h3 class="text-xl font-semibold text-white/90">FPGA Image Edge Detection Pipeline</h3>
       <ul class="mt-3 space-y-2 text-white/70 list-disc list-inside">
-        <li>Hardware-accelerated pipeline in Verilog</li>
-        <li>16× faster than software baseline</li>
+        <li>Hardware-accelerated pipeline in Verilog.</li>
+        <li>16× faster than software baseline.</li>
       </ul>
       <div class="mt-4 flex gap-3">
         <a href="https://github.com/ALECIA13/EEE4120F--YODA" target="_blank" class="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-black font-medium transition">GitHub Repo</a>
@@ -102,110 +98,88 @@
       </div>
     </div>
 
-    <!-- Micromouse Power Module Compact Version -->
-<div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-  <h3 class="text-lg font-semibold text-white/90">Micromouse Power Module</h3>
-
-  <ul class="mt-3 space-y-2 text-white/70 list-disc list-inside">
-    <li>Custom PCB for motor control and power management.</li>
-    <li>Integrated with sensing and navigation modules.</li>
-    <li>Programmed Micromouse for line-following and wall detection behavior.</li>
-  </ul>
-
-  <!-- Button to open modal -->
-  <button id="viewMicromouseBtn" class="mt-4 px-4 py-2 bg-white/10 text-white/90 rounded-lg hover:bg-white/20">
-    View Demo & Images
-  </button>
-</div>
-
-<!-- Modal Overlay -->
-<div id="micromouseModal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-6">
-  <div class="bg-white/5 p-6 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
-    
-    <!-- Close Button -->
-    <button id="closeMicromouseBtn" class="absolute top-4 right-4 text-white bg-white/20 hover:bg-white/40 px-3 py-1 rounded-xl">✕</button>
-    
-    <h3 class="text-lg font-semibold text-white/90 mb-4">Micromouse Power Module</h3>
-
-    <!-- Tabs -->
-    <div class="flex gap-2 mb-4">
-      <button id="tabDemo" class="px-4 py-2 bg-white/10 text-white/90 rounded-lg hover:bg-white/20">Demo Video</button>
-      <button id="tabPCB" class="px-4 py-2 bg-white/10 text-white/90 rounded-lg hover:bg-white/20">PCB Image</button>
+    <!-- Micromouse Project -->
+    <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+      <h3 class="text-lg font-semibold text-white/90">Micromouse Power Module</h3>
+      <ul class="mt-3 space-y-2 text-white/70 list-disc list-inside">
+        <li>Custom PCB for motor control and power management.</li>
+        <li>Integrated with sensing and navigation modules.</li>
+        <li>Programmed Micromouse for line-following and wall detection behavior.</li>
+      </ul>
+      <button id="openMicromouseBtn" class="mt-4 px-4 py-2 bg-white/10 text-white/90 rounded-lg hover:bg-white/20">View Demo & Images</button>
     </div>
 
-    <!-- Tab Contents -->
-    <div>
-      <!-- Demo Video -->
-      <div id="demoTab" class="space-y-4">
-        <iframe class="w-full aspect-video rounded-lg border border-white/10" 
-                src="https://www.youtube.com/embed/Cpy7ubZAkJg" 
-                title="Micromouse Demo" 
-                frameborder="0" allowfullscreen>
-        </iframe>
-      </div>
-
-      <!-- PCB Image -->
-      <div id="pcbTab" class="hidden space-y-4">
-        <img src="power_module.jpeg" alt="Micromouse PCB" class="rounded-lg border border-white/10 w-full">
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-  const micromouseModal = document.getElementById('micromouseModal');
-  const openMicromouse = document.getElementById('viewMicromouseBtn');
-  const closeMicromouse = document.getElementById('closeMicromouseBtn');
-
-  const tabDemo = document.getElementById('tabDemo');
-  const tabPCB = document.getElementById('tabPCB');
-  const demoTab = document.getElementById('demoTab');
-  const pcbTab = document.getElementById('pcbTab');
-
-  // Open/Close modal
-  openMicromouse.addEventListener('click', () => micromouseModal.classList.remove('hidden'));
-  closeMicromouse.addEventListener('click', () => micromouseModal.classList.add('hidden'));
-  micromouseModal.addEventListener('click', e => { if(e.target === micromouseModal) micromouseModal.classList.add('hidden'); });
-
-  // Tabs switching
-  tabDemo.addEventListener('click', () => {
-    demoTab.classList.remove('hidden');
-    pcbTab.classList.add('hidden');
-  });
-
-  tabPCB.addEventListener('click', () => {
-    pcbTab.classList.remove('hidden');
-    demoTab.classList.add('hidden');
-  });
-</script>
-
-
-    <a href="3089F_Antenna_Report (1).pdf" target="_blank" class="block">
+    <!-- Yagi-Uda Antenna -->
+    <a href="3089F_Antenna_Report (1).pdf" target="_blank">
       <div class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition cursor-pointer">
         <h3 class="text-xl font-semibold text-white/90">Yagi-Uda Antenna Design & Build</h3>
         <ul class="mt-3 space-y-2 text-white/70 list-disc list-inside">
-          <li>Designed and optimised a 6-element Yagi-Uda antenna at 1.3 GHz using FEKO simulations</li>
-          <li>Constructed prototype with copper wire, Perspex boom, and BNC connector</li>
-          <li>Achieved measured gain within 2% of design specifications</li>
-          <li>Tested reflection coefficients and gain performance with real-world setup</li>
+          <li>Designed and optimised a 6-element Yagi-Uda antenna at 1.3 GHz using FEKO simulations.</li>
+          <li>Constructed prototype with copper wire, Perspex boom, and BNC connector.</li>
+          <li>Achieved measured gain within 2% of design specifications.</li>
+          <li>Tested reflection coefficients and gain performance with real-world setup.</li>
         </ul>
         <span class="text-sm text-white/60 italic block mt-4">PDF Report Available</span>
       </div>
     </a>
 
+    <!-- HF Radar Project -->
     <div class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition cursor-pointer">
       <h3 class="text-xl font-semibold text-white/90">HF Radar (Final Year Project)</h3>
       <ul class="mt-3 space-y-2 text-white/70 list-disc list-inside">
         <li>Currently developing an HF radar system using <strong>Red Pitaya</strong> boards</li>
-        <li>Focus on FPGA programming, waveform generation, and signal sampling</li>
-        <li>Testing with 40 kHz ultrasound transducers, with optional RF testing at 15 MHz</li>
-        <li>Explores practical FPGA-based radar implementation, building on MSc research</li>
+        <li>Focus on FPGA programming, waveform generation, and signal sampling.</li>
+        <li>Testing with 40 kHz ultrasound transducers, with optional RF testing at 15 MHz.</li>
+        <li>Explores practical FPGA-based radar implementation, building on MSc research.</li>
       </ul>
       <span class="text-sm text-white/60 italic block mt-4">Ongoing – Final Year Project</span>
     </div>
 
   </div>
 </section>
+
+<!-- Penguin Modal -->
+<div id="penguinModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-6">
+  <div class="relative max-w-3xl w-full text-center">
+    <img id="penguinImage" src="Weighingplatform.jpeg" alt="Penguin Project" class="rounded-2xl max-h-[60vh] w-full object-contain mb-4">
+    <div class="flex justify-center gap-4 mb-4">
+      <button onclick="document.getElementById('penguinImage').src='Weighingplatform.jpeg'" class="bg-white/20 hover:bg-white/40 text-white px-4 py-2 rounded-xl">Project Photo</button>
+      <button onclick="document.getElementById('penguinImage').src='subsystem-breakdown.jpeg'" class="bg-white/20 hover:bg-white/40 text-white px-4 py-2 rounded-xl">Block Diagram</button>
+    </div>
+    <button onclick="document.getElementById('penguinModal').classList.add('hidden')" class="absolute top-2 right-2 bg-white/20 hover:bg-white/40 text-white px-3 py-1 rounded-xl">✕</button>
+  </div>
+</div>
+
+<!-- Micromouse Modal -->
+<div id="micromouseModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-6">
+  <div class="relative max-w-3xl w-full text-center">
+    <div id="micromouseContent">
+      <img id="micromouseImage" src="power_module.jpeg" alt="Micromouse PCB" class="rounded-2xl max-h-[60vh] w-full object-contain mb-4">
+    </div>
+    <div class="flex justify-center gap-4 mb-4">
+      <button onclick="showMicromouseImage()" class="bg-white/20 hover:bg-white/40 text-white px-4 py-2 rounded-xl">PCB Image</button>
+      <button onclick="showMicromouseDemo()" class="bg-white/20 hover:bg-white/40 text-white px-4 py-2 rounded-xl">Demo</button>
+    </div>
+    <button onclick="document.getElementById('micromouseModal').classList.add('hidden')" class="absolute top-2 right-2 bg-white/20 hover:bg-white/40 text-white px-3 py-1 rounded-xl">✕</button>
+  </div>
+</div>
+
+<script>
+  // Micromouse modal open/close
+  const micromouseModal = document.getElementById('micromouseModal');
+  document.getElementById('openMicromouseBtn').addEventListener('click', () => micromouseModal.classList.remove('hidden'));
+  micromouseModal.addEventListener('click', e => { if(e.target === micromouseModal) micromouseModal.classList.add('hidden'); });
+
+  // Micromouse tab functions
+  function showMicromouseImage() {
+    document.getElementById('micromouseContent').innerHTML = `<img id="micromouseImage" src="power_module.jpeg" alt="Micromouse PCB" class="rounded-2xl max-h-[60vh] w-full object-contain mb-4">`;
+  }
+
+  function showMicromouseDemo() {
+    document.getElementById('micromouseContent').innerHTML = `<iframe class="w-full aspect-video rounded-xl border border-white/10" src="https://www.youtube.com/embed/Cpy7ubZAkJg" title="Micromouse Demo" frameborder="0" allowfullscreen></iframe>`;
+  }
+</script>
+
   <!-- Experience Section -->
 <section id="experience" class="py-20 px-6 md:px-10 lg:px-16 max-w-6xl mx-auto">
   <h2 class="text-3xl md:text-4xl font-bold text-white/90 mb-10">Experience</h2>
@@ -255,7 +229,7 @@
       <!-- Software Content -->
       <div id="softwareTab" class="space-y-4">
         <ul class="list-disc list-inside text-white/70">
-          <li>Built LVGL UI and integrated RFM69HW wireless module</li>
+          <li>Built LVGL UI and integrated RFM69HW wireless module.</li>
         </ul>
         <img src="NUT_UI.jpeg" alt="UI Screenshot" class="rounded-lg border border-white/10 w-full">
       </div>
