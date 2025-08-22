@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zolile Zoko – ePortfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes radarSweep { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body class="min-h-screen bg-black text-white selection:bg-cyan-300/30 selection:text-white">
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 md:px-10 lg:px-16 py-3">
+      <a href="#home" class="font-semibold tracking-tight text-white">Zolile Zoko</a>
+      <div class="hidden md:flex gap-1">
+        <a href="#about" class="rounded-xl px-3 py-2 text-sm text-white/80 hover:text-white hover:bg-white/10">About</a>
+        <a href="#projects" class="rounded-xl px-3 py-2 text-sm text-white/80 hover:text-white hover:bg-white/10">Projects</a>
+        <a href="#experience" class="rounded-xl px-3 py-2 text-sm text-white/80 hover:text-white hover:bg-white/10">Experience</a>
+        <a href="#skills" class="rounded-xl px-3 py-2 text-sm text-white/80 hover:text-white hover:bg-white/10">Skills</a>
+        <a href="#leadership" class="rounded-xl px-3 py-2 text-sm text-white/80 hover:text-white hover:bg-white/10">Leadership</a>
+        <a href="#contact" class="rounded-xl px-3 py-2 text-sm text-white/80 hover:text-white hover:bg-white/10">Contact</a>
+      </div>
+      <a href="#contact" class="hidden md:inline-flex rounded-xl bg-cyan-500/20 px-3 py-2 text-sm font-medium text-cyan-300 ring-1 ring-cyan-400/30 hover:bg-cyan-500/30">Get in touch</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Radar Background -->
+  <section id="home" class="relative flex min-h-[78vh] items-center px-6 md:px-10 lg:px-16 overflow-hidden">
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <svg viewBox="0 0 1200 1200" class="h-full w-full opacity-40">
+        <circle cx="600" cy="600" r="120" stroke="currentColor" stroke-opacity="0.15" stroke-width="2" fill="none" />
+        <circle cx="600" cy="600" r="220" stroke="currentColor" stroke-opacity="0.15" stroke-width="2" fill="none" />
+        <circle cx="600" cy="600" r="340" stroke="currentColor" stroke-opacity="0.15" stroke-width="2" fill="none" />
+        <circle cx="600" cy="600" r="480" stroke="currentColor" stroke-opacity="0.15" stroke-width="2" fill="none" />
+      </svg>
+      <div class="absolute left-1/2 top-1/2 h-[1200px] w-[1200px] -translate-x-1/2 -translate-y-1/2">
+        <div class="absolute inset-0 rounded-full" style="background: conic-gradient(from 0deg, rgba(56,189,248,0.6), rgba(56,189,248,0) 40deg, transparent 360deg); filter: blur(1px); animation: radarSweep 7s linear infinite"></div>
+      </div>
+    </div>
+    <div class="mx-auto max-w-6xl">
+      <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70 mb-6">
+        <span class="h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        <span>Radar Mode: Tracking Opportunities</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white">Engineering through <span class="text-cyan-300">Innovation & Impact</span></h1>
+      <p class="mt-4 max-w-2xl text-white/70">Final-year Electrical & Computer Engineering student at UCT. I design IoT systems, FPGA accelerators, and embedded interfaces,I enjoy turning ideas into practical, human-centered solutions.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#projects" class="rounded-xl bg-cyan-500/20 px-5 py-3 text-sm font-medium text-cyan-300 ring-1 ring-cyan-400/30 hover:bg-cyan-500/30">View Projects</a>
+        <a href="#about" class="rounded-xl border border-white/10 px-5 py-3 text-sm font-medium text-white/80 hover:bg-white/10">About Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section with Portrait -->
+  <section id="about" class="py-20 px-6 md:px-10 lg:px-16 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    <div class="md:w-1/3 flex justify-center">
+      <img src="Zolile Zoko.jpg" alt="Zolile Zoko" class="rounded-full border-4 border-cyan-400 w-64 h-64 object-cover">
+    </div>
+  <div class="md:w-2/3">
+  <h2 class="text-3xl md:text-4xl font-bold text-white/90 mb-6">About Me</h2>
+  <p class="text-white/80 leading-relaxed">
+    I’m Zolile Zoko, born and bred in a small township in the Free State called Botshabelo, which means "Place of Refuge" when translated from Sesotho to English. Every day, I push myself to become a better engineer by giving my all and staying open to learning. I want to use the skills I’ve gained at UCT to make a real difference in society, in any way I can. I love getting lost in a problem, wrestling with it, exploring countless solutions, and then realizing that sometimes the simplest approach is the best first step. I learn fast, work well with others, and care deeply about making technology useful for real people.
+  </p>
+  
+</div>
+
+  </section>
+<section id="projects" class="py-20 px-6 md:px-10 lg:px-16 max-w-6xl mx-auto">
+  <h2 class="text-3xl md:text-4xl font-bold text-white/90 mb-10">Projects</h2>
+  
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <div onclick="document.getElementById('penguinModal').classList.remove('hidden')" class="rounded-2xl border border-white/10 bg-white/5 p-6 cursor-pointer hover:bg-white/10 transition">
+      <h3 class="text-xl font-semibold text-white/90">Penguin Weight Monitoring (IoT + ML)</h3>
+      <ul class="mt-3 space-y-2 text-white/70 list-disc list-inside">
+        <li>ESP32-CAM + RFID + load cells for real-time health tracking</li>
+        <li>Dashboard with Flask backend hosted on AWS</li>
+        <li>ML model for anomaly detection and alerts</li>
+      </ul>
+    </div>
+
+    <div id="penguinModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+      <div class="relative">
+        <img src="Weighingplatform.jpeg" alt="Penguin Project" class="rounded-2xl max-h-[80vh]">
+        <button onclick="document.getElementById('penguinModal').classList.add('hidden')" class="absolute top-2 right-2 bg-white/20 hover:bg-white/40 text-white px-3 py-1 rounded-xl">✕</button>
+      </div>
+    </div>
+
+    <div class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+      <h3 class="text-xl font-semibold text-white/90">FPGA Image Edge Detection Pipeline</h3>
+      <ul class="mt-3 space-y-2 text-white/70 list-disc list-inside">
+        <li>Hardware-accelerated pipeline in Verilog</li>
+        <li>16× faster than software baseline</li>
+      </ul>
+      <div class="mt-4 flex gap-3">
+        <a href="https://github.com/ALECIA13/EEE4120F--YODA" target="_blank" class="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-black font-medium transition">GitHub Repo</a>
+        <a href="EEE4120F_2025_Milestone_5_Hand_in_YODA_Group_8.pdf" target="_blank" class="px-4 py-2 rounded-xl bg-black border border-white/20 hover:bg-white/10 text-white font-medium transition">PDF Report</a>
+      </div>
+    </div>
+
+    <!-- Micromouse Power Module Compact Version -->
+<div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+  <h3 class="text-lg font-semibold text-white/90">Micromouse Power Module</h3>
+
+  <ul class="mt-3 space-y-2 text-white/70 list-disc list-inside">
+    <li>Custom PCB for motor control and power management</li>
+    <li>Integrated with sensing and navigation modules</li>
+  </ul>
+
+  <!-- Button to open modal -->
+  <button id="viewMicromouseBtn" class="mt-4 px-4 py-2 bg-white/10 text-white/90 rounded-lg hover:bg-white/20">
+    View Demo & Images
+  </button>
+</div>
+
+<!-- Modal Overlay -->
+<div id="micromouseModal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-6">
+  <div class="bg-white/5 p-6 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
+    
+    <!-- Close Button -->
+    <button id="closeMicromouseBtn" class="absolute top-4 right-4 text-white bg-white/20 hover:bg-white/40 px-3 py-1 rounded-xl">✕</button>
+    
+    <h3 class="text-lg font-semibold text-white/90 mb-4">Micromouse Power Module</h3>
+
+    <!-- Tabs -->
+    <div class="flex gap-2 mb-4">
+      <button id="tabDemo" class="px-4 py-2 bg-white/10 text-white/90 rounded-lg hover:bg-white/20">Demo Video</button>
+      <button id="tabPCB" class="px-4 py-2 bg-white/10 text-white/90 rounded-lg hover:bg-white/20">PCB Image</button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div>
+      <!-- Demo Video -->
+      <div id="demoTab" class="space-y-4">
+        <iframe class="w-full aspect-video rounded-lg border border-white/10" 
+                src="https://www.youtube.com/embed/Cpy7ubZAkJg" 
+                title="Micromouse Demo" 
+                frameborder="0" allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- PCB Image -->
+      <div id="pcbTab" class="hidden space-y-4">
+        <img src="power_module.jpeg" alt="Micromouse PCB" class="rounded-lg border border-white/10 w-full">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const micromouseModal = document.getElementById('micromouseModal');
+  const openMicromouse = document.getElementById('viewMicromouseBtn');
+  const closeMicromouse = document.getElementById('closeMicromouseBtn');
+
+  const tabDemo = document.getElementById('tabDemo');
+  const tabPCB = document.getElementById('tabPCB');
+  const demoTab = document.getElementById('demoTab');
+  const pcbTab = document.getElementById('pcbTab');
+
+  // Open/Close modal
+  openMicromouse.addEventListener('click', () => micromouseModal.classList.remove('hidden'));
+  closeMicromouse.addEventListener('click', () => micromouseModal.classList.add('hidden'));
+  micromouseModal.addEventListener('click', e => { if(e.target === micromouseModal) micromouseModal.classList.add('hidden'); });
+
+  // Tabs switching
+  tabDemo.addEventListener('click', () => {
+    demoTab.classList.remove('hidden');
+    pcbTab.classList.add('hidden');
+  });
+
+  tabPCB.addEventListener('click', () => {
+    pcbTab.classList.remove('hidden');
+    demoTab.classList.add('hidden');
+  });
+</script>
+
+
+    <a href="3089F_Antenna_Report (1).pdf" target="_blank" class="block">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition cursor-pointer">
+        <h3 class="text-xl font-semibold text-white/90">Yagi-Uda Antenna Design & Build</h3>
+        <ul class="mt-3 space-y-2 text-white/70 list-disc list-inside">
+          <li>Designed and optimised a 6-element Yagi-Uda antenna at 1.3 GHz using FEKO simulations</li>
+          <li>Constructed prototype with copper wire, Perspex boom, and BNC connector</li>
+          <li>Achieved measured gain within 2% of design specifications</li>
+          <li>Tested reflection coefficients and gain performance with real-world setup</li>
+        </ul>
+        <span class="text-sm text-white/60 italic block mt-4">PDF Report Available</span>
+      </div>
+    </a>
+
+    <div class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition cursor-pointer">
+      <h3 class="text-xl font-semibold text-white/90">HF Radar (Final Year Project)</h3>
+      <ul class="mt-3 space-y-2 text-white/70 list-disc list-inside">
+        <li>Currently developing an HF radar system using <strong>Red Pitaya</strong> boards</li>
+        <li>Focus on FPGA programming, waveform generation, and signal sampling</li>
+        <li>Testing with 40 kHz ultrasound transducers, with optional RF testing at 15 MHz</li>
+        <li>Explores practical FPGA-based radar implementation, building on MSc research</li>
+      </ul>
+      <span class="text-sm text-white/60 italic block mt-4">Ongoing – Final Year Project</span>
+    </div>
+
+  </div>
+</section>
+  <!-- Experience Section -->
+<section id="experience" class="py-20 px-6 md:px-10 lg:px-16 max-w-6xl mx-auto">
+  <h2 class="text-3xl md:text-4xl font-bold text-white/90 mb-10">Experience</h2>
+  <div class="space-y-6">
+
+    <!-- ICTS Experience -->
+    <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+      <h3 class="text-lg font-semibold text-white/90">ICTS Student Lab Assistant · <span class="text-white/70">UCT</span></h3>
+      <p class="text-sm text-white/50">Feb 2023 – Present</p>
+      <ul class="mt-3 space-y-2 text-white/70 list-disc list-inside">
+        <li>Supported 100+ students per shift and solved issues under pressure</li>
+      </ul>
+    </div>
+<!-- Lumkani Experience Compact Version -->
+<div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+  <h3 class="text-lg font-semibold text-white/90">Hardware Engineering Intern · <span class="text-white/70">Lumkani</span></h3>
+  <p class="text-sm text-white/50">Jun–Jul 2025</p>
+
+  <ul class="mt-3 space-y-2 text-white/70 list-disc list-inside">
+    <li>Built LVGL UI and integrated RFM69HW wireless module</li>
+    <li>Designed a custom PCB upgrading a button-based Network Utility tool to a touchscreen version</li>
+  </ul>
+
+  <!-- Button to open modal -->
+  <button id="viewImagesBtn" class="mt-4 px-4 py-2 bg-white/10 text-white/90 rounded-lg hover:bg-white/20">
+    View Images
+  </button>
+</div>
+
+<!-- Modal Overlay -->
+<div id="lumkaniModal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-6">
+  <div class="bg-white/5 p-6 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
+    
+    <!-- Close Button -->
+    <button id="closeModalBtn" class="absolute top-4 right-4 text-white bg-white/20 hover:bg-white/40 px-3 py-1 rounded-xl">✕</button>
+    
+    <h3 class="text-lg font-semibold text-white/90 mb-4">Lumkani Intern Work</h3>
+
+    <!-- Tabs -->
+    <div class="flex gap-2 mb-4">
+      <button id="tabSoftware" class="px-4 py-2 bg-white/10 text-white/90 rounded-lg hover:bg-white/20">Software</button>
+      <button id="tabHardware" class="px-4 py-2 bg-white/10 text-white/90 rounded-lg hover:bg-white/20">Hardware</button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div>
+      <!-- Software Content -->
+      <div id="softwareTab" class="space-y-4">
+        <ul class="list-disc list-inside text-white/70">
+          <li>Built LVGL UI and integrated RFM69HW wireless module</li>
+        </ul>
+        <img src="NUT_UI.jpeg" alt="UI Screenshot" class="rounded-lg border border-white/10 w-full">
+      </div>
+
+      <!-- Hardware Content -->
+      <div id="hardwareTab" class="hidden space-y-4">
+        <ul class="list-disc list-inside text-white/70">
+          <li>Designed a custom PCB upgrading a button-based Network Utility tool to a touchscreen version</li>
+        </ul>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <img src="back-view.png" alt="PCB Back View" class="rounded-lg border border-white/10 w-full">
+          <img src="front -view.png" alt="PCB Front View" class="rounded-lg border border-white/10 w-full md:col-span-2">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('lumkaniModal');
+  const openBtn = document.getElementById('viewImagesBtn');
+  const closeBtn = document.getElementById('closeModalBtn');
+
+  const tabSoftware = document.getElementById('tabSoftware');
+  const tabHardware = document.getElementById('tabHardware');
+  const softwareTab = document.getElementById('softwareTab');
+  const hardwareTab = document.getElementById('hardwareTab');
+
+  // Open/Close modal
+  openBtn.addEventListener('click', () => modal.classList.remove('hidden'));
+  closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+  modal.addEventListener('click', e => { if(e.target === modal) modal.classList.add('hidden'); });
+
+  // Tabs switching
+  tabSoftware.addEventListener('click', () => {
+    softwareTab.classList.remove('hidden');
+    hardwareTab.classList.add('hidden');
+  });
+
+  tabHardware.addEventListener('click', () => {
+    hardwareTab.classList.remove('hidden');
+    softwareTab.classList.add('hidden');
+  });
+</script>
+
+    
+
+  </div>
+</section>
+
+<script>
+  const softwareBtn = document.getElementById('softwareBtn');
+  const hardwareBtn = document.getElementById('hardwareBtn');
+  const softwareContent = document.getElementById('softwareContent');
+  const hardwareContent = document.getElementById('hardwareContent');
+
+  softwareBtn.addEventListener('click', function() {
+    softwareContent.classList.remove('hidden');
+    hardwareContent.classList.add('hidden');
+  });
+
+  hardwareBtn.addEventListener('click', function() {
+    hardwareContent.classList.remove('hidden');
+    softwareContent.classList.add('hidden');
+  });
+</script>
+
+
+ <!-- Skills Section -->
+<section id="skills" class="py-20 px-6 md:px-10 lg:px-16 max-w-6xl mx-auto">
+  <h2 class="text-3xl md:text-4xl font-bold text-white/90 mb-10">Skills</h2>
+  <div class="grid lg:grid-cols-2 gap-10 items-start">
+
+    <!-- Technical Skills List -->
+    <div class="rounded-2xl border border-white/10 bg-white/5 p-6 max-h-[500px] overflow-y-auto">
+      <h3 class="text-lg font-semibold text-white/90 mb-4">Technical Skills</h3>
+      <div class="grid grid-cols-1 gap-2 text-sm text-white/70">
+        <div class="flex items-center justify-between gap-4"><span>C</span><div class="h-2 w-32 bg-white/10 rounded overflow-hidden"><div class="h-full bg-cyan-400/60" style="width:85%"></div></div></div>
+        <div class="flex items-center justify-between gap-4"><span>Java</span><div class="h-2 w-32 bg-white/10 rounded overflow-hidden"><div class="h-full bg-cyan-400/60" style="width:65%"></div></div></div>
+        <div class="flex items-center justify-between gap-4"><span>Python</span><div class="h-2 w-32 bg-white/10 rounded overflow-hidden"><div class="h-full bg-cyan-400/60" style="width:80%"></div></div></div>
+        <div class="flex items-center justify-between gap-4"><span>Verilog</span><div class="h-2 w-32 bg-white/10 rounded overflow-hidden"><div class="h-full bg-cyan-400/60" style="width:70%"></div></div></div>
+        <div class="flex items-center justify-between gap-4"><span>High Performance ES</span><div class="h-2 w-32 bg-white/10 rounded overflow-hidden"><div class="h-full bg-cyan-400/60" style="width:75%"></div></div></div>
+        <div class="flex items-center justify-between gap-4"><span>PCB design</span><div class="h-2 w-32 bg-white/10 rounded overflow-hidden"><div class="h-full bg-cyan-400/60" style="width:72%"></div></div></div>
+        <div class="flex items-center justify-between gap-4"><span>Web (HTML/CSS/JS)</span><div class="h-2 w-32 bg-white/10 rounded overflow-hidden"><div class="h-full bg-cyan-400/60" style="width:68%"></div></div></div>
+        <div class="flex items-center justify-between gap-4"><span>AWS EC2</span><div class="h-2 w-32 bg-white/10 rounded overflow-hidden"><div class="h-full bg-cyan-400/60" style="width:65%"></div></div></div>
+        <div class="flex items-center justify-between gap-4"><span>Mobile & Wireless Network Design</span><div class="h-2 w-32 bg-white/10 rounded overflow-hidden"><div class="h-full bg-cyan-400/60" style="width:65%"></div></div></div>
+        <div class="flex items-center justify-between gap-4"><span>Digital Signal Processing</span><div class="h-2 w-32 bg-white/10 rounded overflow-hidden"><div class="h-full bg-cyan-400/60" style="width:65%"></div></div></div>
+        <div class="flex items-center justify-between gap-4"><span>ML Pipeline Design</span><div class="h-2 w-32 bg-white/10 rounded overflow-hidden"><div class="h-full bg-cyan-400/60" style="width:65%"></div></div></div>
+        <div class="flex items-center justify-between gap-4"><span>Linux</span><div class="h-2 w-32 bg-white/10 rounded overflow-hidden"><div class="h-full bg-cyan-400/60" style="width:65%"></div></div></div>
+        <div class="flex items-center justify-between gap-4"><span>Heterogeneous Embedded Systems</span><div class="h-2 w-32 bg-white/10 rounded overflow-hidden"><div class="h-full bg-cyan-400/60" style="width:65%"></div></div></div>
+        <div class="flex items-center justify-between gap-4"><span>Antenna Design</span><div class="h-2 w-32 bg-white/10 rounded overflow-hidden"><div class="h-full bg-cyan-400/60" style="width:65%"></div></div></div>
+      </div>
+    </div>
+
+    <!-- Top 5 Skills Radar Chart -->
+    <div class="rounded-2xl border border-white/10 bg-white/5 p-6 flex flex-col items-center">
+      <svg viewBox="0 0 300 300" class="w-72 h-72" id="radarChart">
+        <defs>
+          <linearGradient id="skillGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.6" />
+            <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.2" />
+          </linearGradient>
+        </defs>
+
+        <!-- Grid Circles -->
+        <g stroke="#ffffff22" fill="none">
+          <circle cx="150" cy="150" r="120"/>
+          <circle cx="150" cy="150" r="90"/>
+          <circle cx="150" cy="150" r="60"/>
+        </g>
+
+        <!-- Labels -->
+        <text id="label0" x="150" y="20" fill="white" font-size="12" text-anchor="middle"></text>
+        <text id="label1" x="280" y="150" fill="white" font-size="12" text-anchor="middle"></text>
+        <text id="label2" x="210" y="280" fill="white" font-size="12" text-anchor="middle"></text>
+        <text id="label3" x="90" y="280" fill="white" font-size="12" text-anchor="middle"></text>
+        <text id="label4" x="20" y="150" fill="white" font-size="12" text-anchor="middle"></text>
+
+        <!-- Radar Polygon -->
+        <polygon id="radarPolygon" fill="url(#skillGrad)" stroke="#22d3ee" stroke-width="2"/>
+      </svg>
+      <p class="text-white/70 text-sm mt-2 text-center">Top 5 Skills Radar</p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const topSkills = [
+    { name: "C", value: 85 },
+    { name: "Python", value: 80 },
+    { name: "High Performance ES", value: 75 },
+    { name: "PCB design", value: 72 },
+    { name: "Verilog", value: 70 }
+  ];
+
+  const centerX = 150;
+  const centerY = 150;
+  const maxRadius = 120;
+
+  const radarPolygon = document.getElementById('radarPolygon');
+
+  // Compute points
+  const points = topSkills.map((skill, i) => {
+    const angle = (Math.PI * 2 / topSkills.length) * i - Math.PI / 2;
+    const radius = (skill.value / 100) * maxRadius;
+    const x = centerX + radius * Math.cos(angle);
+    const y = centerY + radius * Math.sin(angle);
+
+    // Set label
+    const label = document.getElementById(`label${i}`);
+    label.textContent = skill.name;
+
+    return `${x},${y}`;
+  });
+
+  radarPolygon.setAttribute('points', points.join(' '));
+</script>
+
+  <!-- Leadership Section -->
+  <section id="leadership" class="py-20 px-6 md:px-10 lg:px-16 max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-white/90 mb-10">Leadership & Engagement</h2>
+    <div class="space-y-6">
+      <a href="2023 mentor certificate_Zolile Zoko.pdf" target="_blank" class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+  <h3 class="text-lg font-semibold text-white/90">Electrical Engineering First-Year Mentor</h3>
+  <p class="text-white/70">
+    In this role, I supported a group of 4 first-year students, helping them navigate the challenges that come with studying Engineering at UCT.
+  </p>
+</a>
+
+  <a href="Career UpdatesUCT-01December2023.pdf" target="_blank" class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+  <h3 class="text-lg font-semibold text-white/90">Moshal Scholarship Career Champion 2023</h3>
+  <p class="text-white/70">
+    In this role, I curated weekly career newsletters for the Moshal Scholarship UCT cohort, aimed at keeping them updated on the latest career opportunities across the various fields supported by the scholarship.
+  </p>
+</a>
+
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 md:px-10 lg:px-16 max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-white/90 mb-10">Contact Me</h2>
+    <p class="text-white/70 mb-6">Interested in collaborating or learning more about my work? Reach out via email or LinkedIn.</p>
+    <div class="flex flex-wrap gap-4">
+      <a href="mailto:zolilemikezoko@gmail.com" class="rounded-xl border border-white/10 px-5 py-3 text-white/80 hover:bg-white/10">Email</a>
+      <a href="https://www.linkedin.com/in/zolile-zoko-a48484216" target="_blank" class="rounded-xl border border-white/10 px-5 py-3 text-white/80 hover:bg-white/10">LinkedIn</a>
+      <a href="https://github.com/ZolileZoko" target="_blank" class="rounded-xl border border-white/10 px-5 py-3 text-white/80 hover:bg-white/10">GitHub</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-10 text-center text-white/50 text-sm">
+    <p>© 2025 Zolile Zoko · Built with a radar-inspired design</p>
+  </footer>
+
+</body>
+</html>
